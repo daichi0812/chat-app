@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import SignOut from './SignOut.jsx'
 import { db, auth } from './firebase.jsx'
-import { Diversity1 } from '@mui/icons-material';
 import SendMessage from './SendMessage.jsx';
 
 const Line = () => {

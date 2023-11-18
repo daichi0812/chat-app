@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import SignIn from './Components/SignIn'
+import { useState } from 'react';
+import './App.css';
+import SignIn from './Components/SignIn';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from './Components/firebase.jsx';
+import Line from './Components/Line.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user] = useAuthState(auth);
 
   return (
     <>
-      <SignIn />
-
+      <div className="App">
+        {user ? <Line /> : <SignIn />}
+      </div>
     </>
   )
 }

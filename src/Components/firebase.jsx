@@ -12,8 +12,10 @@ const firebaseApp = firebase.initializeApp({
     measurementId: "G-S5BRPM8GRC"
 })
 
+// データベースを使う
 const db = firebaseApp.firestore();
 
+// 認証機能(auth)を使う
 const auth = firebase.auth();
 
 export{db, auth};

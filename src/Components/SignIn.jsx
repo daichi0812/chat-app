@@ -5,7 +5,7 @@ import {auth} from './firebase.jsx'
 
 const SignIn = () => {
     function signInWithGoogle() {
-        const provider = new firebase.auth.GoogleAuthProvider();
+        const provider = new firebase.auth.GoogleAuthProvider(); //グーグルの認証のプロバイダーが使えるようになる
         auth.signInWithPopup(provider);
     }
 
